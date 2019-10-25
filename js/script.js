@@ -35,17 +35,21 @@ function start() {
       // Récupère la donnée d'une API
       const data = response.data;
 
+      //déclaration variable i pour chaque container
+      var i=0;
+      for (i=0;i<4;i++){
       // On récupère l'information principal
-      const main = data.list[0].weather[0].main;
-      const description = data.list[0].weather[0].description;
-      const temp = data.list[0].temp.day;
-      const icon = apiWeather.getHTMLElementFromIcon(data.list[0].weather[0].icon);
+      const main = data.list[i].weather[0].main;
+      const description = data.list[i].weather[0].description;
+      const temp = data.list[i].temp.day;
+      const icon = apiWeather.getHTMLElementFromIcon(data.list[i].weather[0].icon);
 
       // Modifier le DOM
-      document.getElementById('today-forecast-main-1').innerHTML = main;
-      document.getElementById('today-forecast-more-info-1').innerHTML = description;
-      document.getElementById('icon-weather-container-1').innerHTML = icon;
-      document.getElementById('today-forecast-temp-1').innerHTML = `${temp}°C`;
+      document.getElementById('today-forecast-main-'+i).innerHTML = main;
+      document.getElementById('today-forecast-more-info-'+i).innerHTML = description;
+      document.getElementById('icon-weather-container-'+i).innerHTML = icon;
+      document.getElementById('today-forecast-temp-'+i).innerHTML = `${temp}°C`;
+      }
       
     })
     .catch(function(error) {

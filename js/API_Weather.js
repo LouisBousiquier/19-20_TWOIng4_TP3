@@ -29,7 +29,7 @@ class API_WEATHER{
   //fonction qui retourne 3 jours
   getThreeDayForecast(){
     return axios
-    .get(`${API_URL}?q=${this.city}&units=metric&cnt=3&appid=${API_KEY}`, {
+    .get(`${API_URL}?q=${this.city}&units=metric&cnt=4&appid=${API_KEY}`, {
       crossdomain: true
     })
   }
