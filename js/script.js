@@ -39,6 +39,7 @@ function start() {
       var i=0;
       for (i=0;i<4;i++){
       // On récupère l'information principal
+
       const main = data.list[i].weather[0].main;
       const description = data.list[i].weather[0].description;
       const temp = data.list[i].temp.day;
@@ -56,5 +57,4 @@ function start() {
       // Affiche une erreur
       console.error(error);
     });
-
 }

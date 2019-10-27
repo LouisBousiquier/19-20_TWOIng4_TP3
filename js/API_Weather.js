@@ -11,10 +11,10 @@ const API_URL_ICON = "http://openweathermap.org/img/wn/";
 
 class API_WEATHER{
   constructor(city){
-    // l'utilisateur choisi la ville 
+    // l'utilisateur choisi la ville dans l'input
 
     var city = document.getElementById("city-input").value;
-    this.city = city;
+        this.city = city;
   }
 
   // Faire la requete à l'API openweathermap
