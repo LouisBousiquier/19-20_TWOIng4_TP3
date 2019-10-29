@@ -34,6 +34,9 @@ function start() {
     .then(function(response) {
       // Récupère la donnée d'une API
       const data = response.data;
+     // let res = data.filter(it => it.city.country.include('FR'));
+     // const data_f = response.data.map(data.list[0].temp.day => data.list[0].temp.day*2);
+            
 
       //déclaration variable i pour chaque container
       var i=0;
@@ -57,4 +60,5 @@ function start() {
       // Affiche une erreur
       console.error(error);
     });
+
 }

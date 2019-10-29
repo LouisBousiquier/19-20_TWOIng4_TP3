@@ -10,13 +10,24 @@ const API_URL_ICON = "http://openweathermap.org/img/wn/";
 
 
 class API_WEATHER{
-  constructor(city){
+  constructor(){
     // l'utilisateur choisi la ville dans l'input
-
-    var city = document.getElementById("city-input").value;
-        this.city = city;
+    var city;
+    var city_input = document.getElementById("city-input"); //variable temporaire
+    if(city_input.value != ""){
+            city = city_input.value;
+            
+          }
+          else {
+            city = "paris";
+          }
+      this.city = city;
   }
 
+  /*change_city(){
+   
+    this.city = city;
+  }*/
   // Faire la requete à l'API openweathermap
   // Retourne une promise
   /*fetchTodayForecast(){
